@@ -1,6 +1,5 @@
 import os
 import openai
-
 from dotenv import load_dotenv
 
 # 環境変数を読み込む
