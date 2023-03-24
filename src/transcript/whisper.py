@@ -23,7 +23,7 @@ def transcript(input_audio_file, output_file_name, api_key):
 load_dotenv()
 
 api_key = os.environ["OPENAI_API_KEY"]
-input_audio_file = "./audio_file/test.mp3"  # 文字起こしをするmp3ファイルの名前
+input_audio_file = "./input/mp3/voice.mp3"  # 文字起こしをするmp3ファイルの名前
 output_file_name = "./output/srt/transcriptJapanese.srt"  # 生成後のSRTファイルの名前
 
 transcript(input_audio_file, output_file_name, api_key)
