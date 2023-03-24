@@ -31,8 +31,8 @@ def translate_srt_file(input_file, output_file, target_language, api_key):
 load_dotenv()
 
 api_key = os.environ["DEEPL_API_KEY"]  # ここにDeepL APIキーを入力してください
-input_file = "./output/transcriptJapanese.srt"  # 変換するSRTファイルの名前
-output_file = "./output/transcriptTaiwanese.srt"  # 変換後のSRTファイルの名前
+input_file = "./output/srt/transcriptJapanese.srt"  # 変換するSRTファイルの名前
+output_file = "./output/srt/transcriptTaiwanese.srt"  # 変換後のSRTファイルの名前
 target_language = "ZH"  # 変換後の言語を指定してください
 
 translate_srt_file(input_file, output_file, api_key)
