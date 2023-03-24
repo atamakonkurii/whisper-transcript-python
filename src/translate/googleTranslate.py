@@ -14,8 +14,8 @@ def translate_srt_file(input_file, output_file, source_language='ja', target_lan
     # 各字幕を翻訳
     for sub in subs:
         result = translate_client.translate(sub.text, 
-                                                     source_language=source_language, 
-                                                     target_language=target_language)
+                                            source_language=source_language, 
+                                            target_language=target_language)
         translated_text = result['translatedText']
         sub.text = translated_text
 
