@@ -1,3 +1,4 @@
+import sys
 import ffmpeg
 import os
 
@@ -17,6 +18,6 @@ if input_file is None:
 # 入力 
 stream = ffmpeg.input(input_file) 
 # 出力 
-stream = ffmpeg.output(stream, "./output/mp3/voice.mp3", ab="64k") 
+stream = ffmpeg.output(stream, "./output/mp3/voice.mp3", ab="128k") 
 # 実行 
 ffmpeg.run(stream)

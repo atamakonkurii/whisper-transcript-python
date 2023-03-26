@@ -1,3 +1,6 @@
+### このファイルは、SRTファイルをXMLファイルに変換するためのスクリプトです。
+### AdobePremiere
+
 import re
 
 def srt_to_xml(input_file, output_file_name):
