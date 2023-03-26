@@ -16,11 +16,9 @@ def transcript(input_audio_file, output_file_name, api_key, prompt):
   transcriptJapanese = openai.Audio.transcribe(model="whisper-1", 
                                               file=audio_file,
                                               language="ja",
-                                              temperature=0.2,
+                                              temperature=0.1,
                                               response_format="srt",
                                               prompt=prompt,
-                                              # compression_ratio_threshold=0.5,
-                                              # condition_on_previous_text=False,
                                               )
 
   with open(output_file_name, 'w') as f:
