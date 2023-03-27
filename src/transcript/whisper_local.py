@@ -6,7 +6,8 @@ audio = model.transcribe("./output/mp3/split/chunk_1.mp3")
 print(audio["text"])
 
 # terminal
-# whisper output/mp3/split/chunk_4.mp3 --model large --output_dir output/srt/japanese --output_format srt --fp16 False --language ja --initial_prompt "大阪旅行に近鉄の火の鳥に乗って行きます" 
+# 例
+# whisper output/mp3/split/chunk_1.mp3 --model large --output_dir output/srt/japanese --output_format srt --fp16 False --language ja --initial_prompt "愛知県にあるジブリパークに来ました" 
 
 # $ whisper --help 
 # usage: whisper [-h] [--model {tiny.en,tiny,base.en,base,small.en,small,medium.en,medium,large-v1,large-v2,large}] [--model_dir MODEL_DIR] [--device DEVICE] [--output_dir OUTPUT_DIR]

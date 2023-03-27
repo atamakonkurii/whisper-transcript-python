@@ -20,7 +20,10 @@ output_file = "./output/srt/combined_japan.srt"
 # SRTファイルのリストを取得
 srt_files = glob.glob(os.path.join(input_dir, '*.srt'))
 # ファイルの作成時刻でソート
-sorted_srt_files = sorted(srt_files, key=os.path.getctime)
+# sorted_srt_files = sorted(srt_files, key=os.path.getctime)
+
+# ファイル名でソート
+sorted_srt_files = sorted(srt_files)
 
 # 分割されたSRTファイルを組み合わせる
 combined_srt = ""

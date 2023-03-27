@@ -3,3 +3,4 @@
 input_movie/*
 output/*
 .env
+example.py
