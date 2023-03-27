@@ -24,7 +24,7 @@ def translate_srt_file(input_file, output_file, source_language='ja', target_lan
 # 環境変数を読み込む
 load_dotenv()
 
-input_file = "./output/srt/transcriptJapanese.srt"  # 変換するSRTファイルの名前
-output_file = "./output/srt/transcriptTaiwanese.srt"  # 変換後のSRTファイルの名前
+input_file = "./output/srt/combined_japan_fix.srt"  # 変換するSRTファイルの名前
+output_file = "./output/srt/combined_taiwanese.srt"  # 変換後のSRTファイルの名前
 
 translate_srt_file(input_file, output_file)
