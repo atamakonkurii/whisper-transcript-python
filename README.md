@@ -16,3 +16,24 @@ Google Translate, DeepL, OpenAI gpt-3.5-turboの３種類を試して、Google T
 #### OpenAI gpt-3.5-turbo
 * プロンプトとレスポンスを取り出すコードが下手すぎなのが原因だと思われるが、１行の日本語に対してレスポンスの行数が読めないので一旦見送り。
 * $0.002 / 1K tokens([価格](https://openai.com/pricing))
+
+#### Docker化
+https://zenn.dev/atakon/scraps/723358fecce380
+
+#### チートシート
+
+```
+docker-compose up -d
+```
+
+```
+docker-compose exec python bash
+```
+
+```
+./movie_to_srt.sh
+```
+
+```
+./translate.sh
+```
