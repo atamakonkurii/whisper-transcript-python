@@ -14,8 +14,8 @@ sys.path.insert(0, str(src_dir))
 import global_value as g
 
 # 入力ファイル名と出力ディレクトリ名
-input_file = "./output/mp3/voice.mp3"
-output_dir = "./output/mp3/split"
+input_file = "./docker_share/output/mp3/movie_audio.mp3"
+output_dir = "./docker_share/output/mp3/split"
 
 # 出力ディレクトリが存在する場合は削除してから再作成
 if os.path.exists(output_dir):
