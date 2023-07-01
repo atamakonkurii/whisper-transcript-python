@@ -14,8 +14,8 @@ sys.path.insert(0, str(src_dir))
 import global_value as g
 
 # 入力ディレクトリと出力ファイル名
-input_dir = "./output/srt/japanese"
-output_file = "./output/srt/combined_japan.srt"
+input_dir = "./docker_share/output/srt/japanese"
+output_file = "./docker_share/output/srt/combined_japan.srt"
 
 # SRTファイルのリストを取得
 srt_files = glob.glob(os.path.join(input_dir, '*.srt'))

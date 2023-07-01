@@ -1,7 +1,9 @@
 .DS_Store
 
+docker_share/*
 input_movie/*
 output/*
 .env
 example.py
 __pychache__/*
+key.json

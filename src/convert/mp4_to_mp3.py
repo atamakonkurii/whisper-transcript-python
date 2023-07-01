@@ -8,7 +8,7 @@ def find_first_mp4_file(directory):
             return os.path.join(directory, file)
     return None
 
-input_directory = "./input_movie"
+input_directory = "./docker_share/input_movie"
 input_file = find_first_mp4_file(input_directory)
 
 if input_file is None:
@@ -18,6 +18,6 @@ if input_file is None:
 # 入力 
 stream = ffmpeg.input(input_file) 
 # 出力 
-stream = ffmpeg.output(stream, "./output/mp3/voice.mp3", ab="128k") 
+stream = ffmpeg.output(stream, "./docker_share/output/mp3/movie_audio.mp3", ab="128k") 
 # 実行 
 ffmpeg.run(stream)
