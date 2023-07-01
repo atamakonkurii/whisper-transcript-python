@@ -21,7 +21,6 @@ Google Translate, DeepL, OpenAI gpt-3.5-turboの３種類を試して、Google T
 https://zenn.dev/atakon/scraps/723358fecce380
 
 #### チートシート
-
 ```
 docker-compose up -d
 ```
@@ -36,4 +35,32 @@ docker-compose exec python bash
 
 ```
 ./translate.sh
+```
+
+
+```
+## container起動, imageなければ作成 
+# docker-compose up -d
+
+## docker containerに入る
+# docker-compose exec python bash
+
+## 再ビルド、containerを落とす
+# docker-compose build
+# docker-compose build --no-cache 
+# docker-compose down
+
+## 日本語動画→日本語自動生成字幕srtファイル
+# ./movie_to_srt.sh
+
+## 日本語自動生成字幕srtファイルを手直し
+
+## 日本語手直しsrtから台湾語機械翻訳srt
+# ./translate.sh 
+
+## docker imageの作成
+# docker image build -t transcript_image -f docker/Dockerfile .
+
+## docker container の起動とアクセス
+# docker container run -it --rm transcript_image /bin/bash
 ```
