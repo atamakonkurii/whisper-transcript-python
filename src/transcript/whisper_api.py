@@ -24,7 +24,7 @@ def transcript(input_audio_file, output_file_name, api_key, prompt):
     print(transcriptJapanese, file=f)
 
 # プロンプト
-prompt = "" 
+prompt = "日本の家族が台湾に旅行に来てくれました" 
 
 api_key = os.environ["OPENAI_API_KEY"]
 input_audio_dir = "./docker_share/output/mp3/split"  # MP3ファイルがあるディレクトリ
