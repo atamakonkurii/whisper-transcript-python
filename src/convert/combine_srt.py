@@ -66,6 +66,9 @@ for srt_file in sorted_srt_files:
             end_time_ms += start_time_offset
 
             # オフセットを適用したタイムスタンプが次のファイルの開始時間を超えていたら修正
+            if start_time_ms > g.interval + start_time_offset:
+                start_time_ms = g.interval + start_time_offset
+
             if end_time_ms > g.interval + start_time_offset:
                 end_time_ms = g.interval + start_time_offset
 
