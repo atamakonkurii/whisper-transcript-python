@@ -32,7 +32,7 @@ interval = g.interval
 for i, chunk in enumerate(audio[::interval]):
     start_time = i * interval
     end_time = start_time + interval
-    output_file = os.path.join(output_dir, f"chunk_{i+1}.mp3")
+    output_file = os.path.join(output_dir, f"chunk_{i+1:02}.mp3")
     chunk.export(output_file, format="mp3")
 
 print("分割が完了しました。")

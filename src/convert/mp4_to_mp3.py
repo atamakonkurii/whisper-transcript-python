@@ -20,4 +20,4 @@ stream = ffmpeg.input(input_file)
 # 出力 
 stream = ffmpeg.output(stream, "./docker_share/output/mp3/movie_audio.mp3", ab="128k") 
 # 実行 
-ffmpeg.run(stream)
+ffmpeg.run(stream, overwrite_output=True)
