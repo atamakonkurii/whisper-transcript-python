@@ -46,9 +46,9 @@ docker-compose exec python bash
 # docker-compose exec python bash
 
 ## 再ビルド、containerを落とす
-# docker-compose build
-# docker-compose build --no-cache 
-# docker-compose down
+# docker compose build
+# docker compose build --no-cache 
+# docker compose down
 
 ## 日本語動画→日本語自動生成字幕srtファイル
 # ./movie_to_srt.sh
