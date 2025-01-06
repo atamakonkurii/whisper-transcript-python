@@ -1,24 +1,25 @@
 import os
-import openai
+from openai import OpenAI
 import glob
 import shutil
 import time
 
 def transcript(input_audio_file, output_file_name, api_key, prompt):
   # apikeyを渡す
-  openai.api_key = api_key
+  client = OpenAI(api_key=api_key)
 
   # audioファイル読み込み
   audio_file= open(input_audio_file, "rb")
 
   # whisper-1モデルで音声認識⇨Japanese
-  transcriptJapanese = openai.Audio.transcribe(model="whisper-1", 
-                                              file=audio_file,
-                                              language="ja",
-                                              temperature=0.1,
-                                              response_format="srt",
-                                              prompt=prompt,
-                                              )
+  transcriptJapanese = client.audio.transcriptions.create(
+    model="whisper-1", 
+    file=audio_file,
+    language="ja",
+    temperature=0.1,
+    response_format="srt",
+    prompt=prompt,
+  )
 
   with open(output_file_name, 'w') as f:
     print(transcriptJapanese, file=f)
