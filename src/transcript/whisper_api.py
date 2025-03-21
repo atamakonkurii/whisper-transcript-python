@@ -11,9 +11,9 @@ def transcript(input_audio_file, output_file_name, api_key, prompt):
   # audioファイル読み込み
   audio_file= open(input_audio_file, "rb")
 
-  # whisper-1モデルで音声認識⇨Japanese
+  # OpenAIモデルで音声認識⇨Japanese
   transcriptJapanese = client.audio.transcriptions.create(
-    model="whisper-1", 
+    model="gpt-4o-transcribe", 
     file=audio_file,
     language="ja",
     temperature=0.1,
